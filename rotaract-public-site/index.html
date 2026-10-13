@@ -1,0 +1,420 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#0d0914">
+  <meta name="description" content="Rotaract Club - Fellowship Through Service. Leadership, youth empowerment, and high-impact community projects.">
+  <title>Rotaract Club · Fellowship Through Service</title>
+
+  <!-- Google Fonts: Syne (Ultra-modern Display/Headings), Plus Jakarta Sans (Clean Modern Sans), Outfit -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@400;500;600;700;800&family=Plus+Jakarta+Sans:ital,wght@0,300;0,400;0,500;0,600;0,700;1,400;1,600&family=Syne:wght@500;700;800&display=swap" rel="stylesheet">
+
+  <link rel="stylesheet" href="styles.css">
+  <script src="site-config.js"></script>
+</head>
+<body data-scroll-container>
+  <!-- Background Motion Lights & Floating Glow Orbs -->
+  <div class="motion-bg" aria-hidden="true">
+    <div class="glow-orb orb-1"></div>
+    <div class="glow-orb orb-2"></div>
+    <div class="glow-orb orb-3"></div>
+    <div class="mesh-grid"></div>
+  </div>
+
+  <!-- Ambient Cursor Glow Follower -->
+  <div class="cursor-glow" id="cursorGlow" aria-hidden="true"></div>
+
+  <!-- Navigation -->
+  <header class="nav-shell">
+    <a class="brand" href="#top">
+      <div class="brand-badge">
+        <span class="rotaract-gear">⚙</span>
+      </div>
+      <div class="brand-text">
+        <b id="clubBrand">ROTARACT CLUB</b>
+        <small id="collegeBrand">YOUTH IN ACTION</small>
+      </div>
+    </a>
+
+    <nav class="desktop-nav" aria-label="Main navigation">
+      <a href="#about" class="nav-link"><span>01</span> About</a>
+      <a href="#projects" class="nav-link"><span>02</span> Projects</a>
+      <a href="#events" class="nav-link"><span>03</span> Events</a>
+      <a href="#impact" class="nav-link"><span>04</span> Impact</a>
+    </nav>
+
+    <div class="nav-actions">
+      <button class="admin-portal-btn" id="ownerButton">
+        <span class="status-indicator"></span>
+        <span id="ownerButtonText">Admin Portal</span>
+        <span class="arrow-glyph">↗</span>
+      </button>
+      <button class="menu-btn" id="menuBtn" aria-label="Toggle navigation menu" aria-expanded="false">
+        <span></span>
+        <span></span>
+      </button>
+    </div>
+
+    <!-- Mobile Navigation Drawer -->
+    <nav class="mobile-menu" id="mobileMenu">
+      <a href="#about" class="mobile-link">About Us</a>
+      <a href="#projects" class="mobile-link">Featured Projects</a>
+      <a href="#events" class="mobile-link">Club Events</a>
+      <a href="#impact" class="mobile-link">Our Impact</a>
+      <button id="mobileOwner" class="mobile-admin-btn">Admin Portal ↗</button>
+    </nav>
+  </header>
+
+  <main id="top">
+    <!-- Hero Section with Motion 3D Canvas & Kinetic Typography -->
+    <section class="hero-section">
+      <div class="wrap hero-grid">
+        <div class="hero-copy" data-reveal>
+          <div class="badge-pill">
+            <span class="pulse-dot"></span>
+            <span class="pill-text">Rotaract District · <span id="heroCollege">Campus Chapter</span></span>
+          </div>
+          <h1 class="hero-title">
+            Fellowship <br>
+            <span class="gradient-text">Through Service.</span>
+          </h1>
+          <p class="hero-desc">
+            We are a dynamic youth movement dedicated to leadership development, high-impact community projects, and creating lifelong global friendships.
+          </p>
+          <div class="hero-cta-group">
+            <a class="btn btn-primary" href="#projects">
+              Explore Our Work <span class="btn-icon">→</span>
+            </a>
+            <a class="btn btn-glass" href="#events">
+              Upcoming Events <span class="btn-icon">⚡</span>
+            </a>
+          </div>
+
+          <div class="hero-stats">
+            <div class="stat-item">
+              <span class="stat-num" data-counter="50">50+</span>
+              <span class="stat-label">Active Members</span>
+            </div>
+            <div class="stat-divider"></div>
+            <div class="stat-item">
+              <span class="stat-num" data-counter="24">24+</span>
+              <span class="stat-label">Impact Projects</span>
+            </div>
+            <div class="stat-divider"></div>
+            <div class="stat-item">
+              <span class="stat-num">100%</span>
+              <span class="stat-label">Youth Driven</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="hero-stage">
+          <div class="hero-canvas-wrap">
+            <canvas id="globe" aria-label="Interactive 3D Motion Sphere"></canvas>
+            <!-- Floating Hologram Badges -->
+            <div class="motion-card badge-top" data-tilt>
+              <div class="card-icon">🌟</div>
+              <div>
+                <strong>Community First</strong>
+                <small>Global Vision & Local Impact</small>
+              </div>
+            </div>
+            <div class="motion-card badge-bottom" data-tilt>
+              <div class="card-indicator"></div>
+              <div>
+                <strong>Self Development</strong>
+                <small>Youth Leadership Lab</small>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="scroll-cue">
+        <span>SCROLL TO EXPLORE</span>
+        <div class="mouse-icon"><div class="wheel"></div></div>
+      </div>
+    </section>
+
+    <!-- Kinetic Marquee Ticker -->
+    <div class="marquee-strip" aria-label="Core Rotaract Pillars">
+      <div class="marquee-track">
+        <span>SERVICE ABOVE SELF</span><span class="marquee-spark">✦</span>
+        <span>YOUTH LEADERSHIP</span><span class="marquee-spark">✦</span>
+        <span>PROFESSIONAL DEVELOPMENT</span><span class="marquee-spark">✦</span>
+        <span>COMMUNITY IMPACT</span><span class="marquee-spark">✦</span>
+        <span>INTERNATIONAL FELLOWSHIP</span><span class="marquee-spark">✦</span>
+        <span>SERVICE ABOVE SELF</span><span class="marquee-spark">✦</span>
+        <span>YOUTH LEADERSHIP</span><span class="marquee-spark">✦</span>
+        <span>PROFESSIONAL DEVELOPMENT</span><span class="marquee-spark">✦</span>
+        <span>COMMUNITY IMPACT</span><span class="marquee-spark">✦</span>
+        <span>INTERNATIONAL FELLOWSHIP</span><span class="marquee-spark">✦</span>
+      </div>
+    </div>
+
+    <!-- About / Avenues of Service Section -->
+    <section class="section about-section wrap" id="about" data-reveal>
+      <div class="section-header">
+        <div>
+          <span class="section-tag">01 // AVENUES OF SERVICE</span>
+          <h2 class="section-title">How We Empower <br><span class="accent-italic">People & Communities</span></h2>
+        </div>
+        <p class="section-lead">
+          Rotaract brings together college students and young professionals to exchange ideas with leaders in the community, develop leadership skills, and have fun through service.
+        </p>
+      </div>
+
+      <div class="avenues-grid">
+        <article class="avenue-card" data-tilt>
+          <div class="card-blur-glow"></div>
+          <span class="avenue-num">01</span>
+          <div class="avenue-icon">🤝</div>
+          <h3>Community Service</h3>
+          <p>Tackling vital humanitarian challenges, supporting local orphanages, environmental drives, and health initiatives.</p>
+        </article>
+
+        <article class="avenue-card" data-tilt>
+          <div class="card-blur-glow"></div>
+          <span class="avenue-num">02</span>
+          <div class="avenue-icon">🚀</div>
+          <h3>Professional Development</h3>
+          <p>Workshops, executive speaker sessions, career mentorship, and leadership seminars to hone modern skills.</p>
+        </article>
+
+        <article class="avenue-card" data-tilt>
+          <div class="card-blur-glow"></div>
+          <span class="avenue-num">03</span>
+          <div class="avenue-icon">🌐</div>
+          <h3>International Service</h3>
+          <p>Fostering peace, cross-cultural youth exchanges, and collaborative initiatives with sister clubs worldwide.</p>
+        </article>
+
+        <article class="avenue-card" data-tilt>
+          <div class="card-blur-glow"></div>
+          <span class="avenue-num">04</span>
+          <div class="avenue-icon">❤️</div>
+          <h3>Club Service & Fellowship</h3>
+          <p>Building strong bonding, social gatherings, celebrations, sports meets, and life-long campus friendships.</p>
+        </article>
+      </div>
+    </section>
+
+    <!-- Projects Section -->
+    <section class="section projects-section" id="projects" data-reveal>
+      <div class="wrap">
+        <div class="section-header">
+          <div>
+            <span class="section-tag">02 // ACTION IN MOTION</span>
+            <h2 class="section-title">Our Featured <br><span class="accent-italic">Projects & Initiatives</span></h2>
+          </div>
+          <div class="project-actions-bar">
+            <span class="projects-count" id="projectCountBadge">0 Projects</span>
+            <button class="btn btn-sm btn-glass add-trigger" data-create="project" id="addProjectTrigger" style="display:none;">
+              ＋ Add Project
+            </button>
+          </div>
+        </div>
+
+        <div class="projects-grid" id="projectList">
+          <!-- Dynamically populated or empty placeholder -->
+          <div class="empty-state">
+            <div class="empty-icon-wrap">✦</div>
+            <h3>Projects Loading</h3>
+            <p>Gathering club milestones and impactful campus initiatives...</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Events Section -->
+    <section class="section events-section wrap" id="events" data-reveal>
+      <div class="section-header">
+        <div>
+          <span class="section-tag">03 // CALENDAR & TIMELINE</span>
+          <h2 class="section-title">Experience What's Next <br><span class="accent-italic">Join Upcoming Events</span></h2>
+        </div>
+        <div class="event-actions-bar">
+          <button class="btn btn-sm btn-glass add-trigger" data-create="event" id="addEventTrigger" style="display:none;">
+            ＋ Add Event
+          </button>
+        </div>
+      </div>
+
+      <div class="events-dual-layout">
+        <div class="event-column">
+          <div class="column-header">
+            <h3>Upcoming Events</h3>
+            <span class="live-pill">LIVE CALENDAR</span>
+          </div>
+          <div class="events-stream" id="upcomingList">
+            <div class="empty-event-card">No upcoming dates announced yet. New initiatives coming soon.</div>
+          </div>
+        </div>
+
+        <div class="event-column past-column">
+          <div class="column-header">
+            <h3>Past Milestones</h3>
+            <span class="archive-pill">ARCHIVED MEMORIES</span>
+          </div>
+          <div class="events-stream" id="pastList">
+            <div class="empty-event-card">Our historic achievements and past meets will appear here.</div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Impact & Join Section -->
+    <section class="section join-section" id="impact" data-reveal>
+      <div class="wrap join-card" data-tilt>
+        <div class="join-glow"></div>
+        <div class="join-content">
+          <span class="section-tag">04 // BECOME A ROTARACTOR</span>
+          <h2 class="join-headline">Ready To Make <br><span class="gradient-text">A Real Difference?</span></h2>
+          <p class="join-desc">
+            Whether you want to lead community projects, elevate your career skills, or connect with passionate changemakers, there is a place for you in our club.
+          </p>
+          <div class="join-buttons">
+            <a class="btn btn-primary" id="joinLink" href="mailto:?subject=Joining%20Rotaract%20Club">
+              Join Our Club Today <span class="btn-icon">↗</span>
+            </a>
+            <a class="btn btn-glass" href="#about">
+              Learn More
+            </a>
+          </div>
+        </div>
+        <div class="join-symbol-area">
+          <div class="rotating-symbol">
+            <span>ROTARACT • SERVICE • FELLOWSHIP • LEADERSHIP • </span>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- Modern Footer -->
+  <footer class="site-footer wrap">
+    <div class="footer-top">
+      <div class="footer-brand">
+        <div class="brand-badge"><span class="rotaract-gear">⚙</span></div>
+        <div>
+          <b id="footerClub">ROTARACT CLUB</b>
+          <small id="footerCollege">DISTRICT CHAPTER</small>
+        </div>
+      </div>
+      <p class="footer-tagline">Empowering youth to spark positive, lasting change across our campus and community.</p>
+      <a class="back-to-top" href="#top">Back to top ↑</a>
+    </div>
+    <div class="footer-bottom">
+      <span>Rotaract Club © <span id="currentYear">2026</span>. All rights reserved.</span>
+      <span class="footer-meta">Affiliated with Rotary International</span>
+    </div>
+  </footer>
+
+  <!-- Toast Notification System -->
+  <div class="toast-box" id="toast" role="status" aria-live="polite"></div>
+
+  <!-- Admin Modal (Dual Mode: Authentication & Content Publishing) -->
+  <div class="modal-backdrop" id="modal" aria-hidden="true">
+    <div class="modal-card" role="dialog" aria-modal="true" aria-labelledby="modalTitle">
+      <button class="modal-close" id="closeModal" aria-label="Close modal">✕</button>
+
+      <div class="modal-header">
+        <span class="modal-badge" id="modalKicker">CLUB CONTROL CENTER</span>
+        <h3 class="modal-heading" id="modalTitle">Admin Portal</h3>
+        <p class="modal-sub" id="modalText">Authenticate to manage events and projects.</p>
+      </div>
+
+      <!-- Login Form -->
+      <form id="loginForm" class="modal-form">
+        <div class="form-group">
+          <label for="ownerEmail">Admin Email</label>
+          <input id="ownerEmail" type="email" placeholder="rotaractclubvasavisfw@gmail.com" required autocomplete="email">
+        </div>
+        <div class="form-group">
+          <label for="adminPass">Admin Password / Access Key <small class="text-muted">(Optional)</small></label>
+          <input id="adminPass" type="password" placeholder="Enter key or use magic link">
+        </div>
+        <button class="btn btn-primary btn-block" type="submit">
+          <span>Sign In / Send Magic Link</span> <span>→</span>
+        </button>
+        <div class="demo-login-box">
+          <button type="button" class="btn btn-glass btn-sm btn-block" id="demoAdminBtn">
+            ⚡ Quick Sign In as rotaractclubvasavisfw@gmail.com
+          </button>
+        </div>
+      </form>
+
+      <!-- Content Creation Form (Events & Projects) -->
+      <form id="contentForm" class="modal-form" hidden>
+        <input type="hidden" id="itemKind">
+
+        <div class="form-group">
+          <label for="itemTitle" id="itemTitleLabel">Title</label>
+          <input id="itemTitle" maxlength="100" placeholder="e.g. Tree Plantation Drive" required>
+        </div>
+
+        <div class="form-row">
+          <div class="form-group">
+            <label for="itemCategory">Category / Avenue</label>
+            <select id="itemCategory">
+              <option value="Community Service">Community Service</option>
+              <option value="Professional Development">Professional Development</option>
+              <option value="Club Service">Club Service</option>
+              <option value="International Service">International Service</option>
+              <option value="Youth & Sports">Youth & Sports</option>
+              <option value="Environment & Green">Environment & Green</option>
+            </select>
+          </div>
+
+          <div class="form-group" id="dateWrap">
+            <label for="itemDate">Event Date</label>
+            <input id="itemDate" type="date">
+          </div>
+        </div>
+
+        <div class="form-group">
+          <label for="itemDescription">Description & Highlights</label>
+          <textarea id="itemDescription" maxlength="350" rows="3" placeholder="Provide event schedule, location, or project impact summary..."></textarea>
+        </div>
+
+        <button class="btn btn-primary btn-block" type="submit">
+          <span>Publish To Club Site</span> <span>✦</span>
+        </button>
+      </form>
+
+      <!-- Admin Tools View (When logged in) -->
+      <div class="admin-panel" id="adminTools" hidden>
+        <div class="admin-profile">
+          <div class="admin-avatar">👑</div>
+          <div class="admin-info">
+            <b id="signedEmail">admin@rotaract.org</b>
+            <span class="admin-status-badge"><span class="live-dot"></span> Authorized Club Admin</span>
+          </div>
+          <button id="signOut" class="btn btn-sm btn-glass">Log Out</button>
+        </div>
+
+        <div class="admin-actions-grid">
+          <button class="admin-action-btn" data-create="event">
+            <span class="action-icon">📅</span>
+            <strong>Add New Event</strong>
+            <small>Schedule an upcoming club meet</small>
+          </button>
+          <button class="admin-action-btn" data-create="project">
+            <span class="action-icon">🚀</span>
+            <strong>Add New Project</strong>
+            <small>Showcase a community initiative</small>
+          </button>
+        </div>
+      </div>
+
+      <div class="modal-footer" id="modalFoot">
+        Public visitors can browse all events and projects freely.
+      </div>
+    </div>
+  </div>
+
+  <script type="module" src="src/main.js"></script>
+</body>
+</html>
